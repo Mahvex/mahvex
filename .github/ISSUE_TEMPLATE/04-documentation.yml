@@ -1,0 +1,71 @@
+name: 📝 Documentation Issue
+description: Report an issue with Mahvex documentation or repository information.
+title: "[Docs]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the Mahvex documentation.
+
+        Please provide enough information for the issue to be reviewed.
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Documentation issue type
+      description: What kind of documentation problem are you reporting?
+      options:
+        - Incorrect information
+        - Outdated information
+        - Missing information
+        - Broken link
+        - Spelling or grammar
+        - Unclear explanation
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Documentation location
+      description: Provide the file, page, section, or URL where you found the issue.
+      placeholder: README.md, TERMS.md, or https://...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is the problem?
+      description: Describe the documentation issue clearly.
+      placeholder: Explain what is incorrect, missing, outdated, or unclear...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested correction
+      description: If you have a proposed correction, describe it here.
+      placeholder: Explain what should be changed...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add screenshots, references, or other useful context.
+      placeholder: Additional context...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: conduct
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow the Mahvex Code of Conduct.
+          required: true
