@@ -1,0 +1,93 @@
+name: 🐛 Bug Report
+description: Report a problem or unexpected behavior on Mahvex.
+title: "[Bug]: "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Mahvex.
+
+        Please search existing issues before submitting a new report.
+
+  - type: checkboxes
+    id: existing-issues
+    attributes:
+      label: Existing issues
+      description: Please confirm that you searched the existing issues.
+      options:
+        - label: I have searched the existing issues and did not find a duplicate.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem clearly.
+      placeholder: Tell us what happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: Describe the behavior you expected.
+      placeholder: Tell us what should have happened...
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Affected page or URL
+      description: If applicable, provide the Mahvex page where the problem occurred.
+      placeholder: https://mahvex.githubpage.com/...
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: Which browser were you using?
+      options:
+        - Chrome
+        - Edge
+        - Firefox
+        - Safari
+        - Opera
+        - Other
+        - Not applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: If possible, list the steps needed to reproduce the problem.
+      placeholder: |
+        1. Open ...
+        2. Go to ...
+        3. Click ...
+        4. The problem occurs...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add screenshots, error messages, or anything else that may help.
+      placeholder: Additional context...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: conduct
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow the Mahvex Code of Conduct.
+          required: true
