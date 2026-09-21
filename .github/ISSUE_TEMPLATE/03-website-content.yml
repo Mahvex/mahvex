@@ -1,0 +1,72 @@
+name: 🌐 Website / Content Issue
+description: Report a problem with the Mahvex website or its content.
+title: "[Website]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve Mahvex.
+
+        Please provide enough information for the issue to be reviewed.
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue type
+      description: What kind of problem are you reporting?
+      options:
+        - Broken link
+        - Incorrect information
+        - Outdated information
+        - Spelling or grammar
+        - Translation issue
+        - Missing content
+        - Display or layout issue
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Affected page or URL
+      description: Provide the URL of the page where you found the issue.
+      placeholder: https://mahvex.githubpage.com/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is the problem?
+      description: Clearly describe the issue you found.
+      placeholder: Describe the problem...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it be?
+      description: If applicable, describe the correct information or expected result.
+      placeholder: Explain what should be changed...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add screenshots, references, or anything else that may help.
+      placeholder: Additional context...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: conduct
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow the Mahvex Code of Conduct.
+          required: true
