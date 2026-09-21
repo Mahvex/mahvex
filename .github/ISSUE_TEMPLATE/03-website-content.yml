@@ -2,6 +2,9 @@ name: 🌐 Website / Content Issue
 description: Report a problem with the Mahvex website or its content.
 title: "[Website]: "
 
+labels:
+  - content
+
 body:
   - type: markdown
     attributes:
