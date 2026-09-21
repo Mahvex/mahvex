@@ -1,0 +1,74 @@
+name: 💡 Feature / Service Suggestion
+description: Suggest a new feature, service, or improvement for Mahvex.
+title: "[Suggestion]: "
+labels:
+  - enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea for Mahvex.
+
+        Please search existing issues and discussions before submitting a new suggestion.
+
+  - type: checkboxes
+    id: existing-issues
+    attributes:
+      label: Existing suggestions
+      description: Please confirm that you searched existing issues and discussions.
+      options:
+        - label: I have searched existing issues and discussions and did not find a duplicate.
+          required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to see?
+      description: Describe your proposed feature, service, or improvement.
+      placeholder: Tell us about your idea...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Explain the problem or need behind your suggestion.
+      placeholder: What problem would this solve for Mahvex users?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Suggestion category
+      description: What area of Mahvex does this suggestion relate to?
+      options:
+        - Platform / Website
+        - Developer Tools
+        - AI
+        - Learning / Education
+        - News / Articles
+        - Community
+        - Cloud / Infrastructure
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add examples, references, screenshots, or other useful context.
+      placeholder: Additional context...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: conduct
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow the Mahvex Code of Conduct.
+          required: true
